@@ -1,0 +1,23 @@
+// Capacitor Plugin: Sunmi Native Printer
+// مكان التثبيت: android/capacitor-sunmi/
+
+apply plugin: 'com.android.library'
+
+android {
+    namespace "com.gastech.sunmi"
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 34
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation project(':capacitor-android')
+}
