@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GasTech POS</string>
+    <string name="sync_button">تحديث</string>
+    <string name="sync_done">تم التحديث ✓</string>
+    <string name="exit_confirm">هل تريد الخروج من التطبيق؟</string>
+    <string name="yes">نعم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="about">عن التطبيق</string>
+    <string name="about_title">GasTech POS</string>
+    <string name="about_designer">تصميم وتطوير</string>
+    <string name="about_designer_name">محمد السنجري</string>
+    <string name="about_company">سينجو لتكنولوجيا المعلومات</string>
+    <string name="about_phone">+965 6695 4408</string>
+    <string name="about_email">Elsangary@hotmail.com</string>
+    <string name="about_version">الإصدار 3.0.0</string>
+    <string name="menu_refresh">تحديث الموقع</string>
+    <string name="menu_about">معلومات المطور</string>
+    <string name="menu_clear_cache">مسح الكاش وإعادة التحميل</string>
+</resources>

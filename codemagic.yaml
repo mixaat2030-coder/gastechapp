@@ -1,0 +1,26 @@
+workflows:
+  android-apk-build:
+    name: Build GasTech POS APK
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      vars:
+        PACKAGE_NAME: "com.gastech.pos"
+      java: 17
+    scripts:
+      - name: Set Android SDK location
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+      - name: Grant execute permission for gradlew
+        script: |
+          chmod +x ./gradlew || echo "gradlew not present, will use system gradle"
+      - name: Build Android APK (Release Unsigned)
+        script: |
+          if [ -f "./gradlew" ]; then
+            ./gradlew assembleRelease
+          else
+            gradle assembleRelease
+          fi
+    artifacts:
+      - app/build/outputs/**/*.apk
+      - app/build/outputs/**/mapping.txt
